@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: getting-started
+  name: getting-started
+  namespace: getting-started
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getting-started
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: getting-started
+    spec:
+      containers:
+        - image: docker.io/alexandergf1996/getting-started:1.0.0-SNAPSHOT
+          name: getting-started
+          env:
+            - name: COLOR
+              value: "blue"
+          resources: {}
+---
+

@@ -1,0 +1,6 @@
+namespace: getting-started
+resources:
+- getting-started-ns.yaml
+- getting-started-deployment.yaml
+- getting-started-route.yaml
+- getting-started-svc.yaml
