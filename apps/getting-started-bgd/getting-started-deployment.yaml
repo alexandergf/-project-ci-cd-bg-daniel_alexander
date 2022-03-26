@@ -18,11 +18,11 @@ spec:
         app: getting-started
     spec:
       containers:
-        - image: quay.io/redhatworkshops/bgd:latest
-          name: getting-started
-          env:
-            - name: COLOR
-              value: "blue"
-          resources: {}
+      - image: docker.io/alexandergf1996/getting-started:1.0.0-SNAPSHOT
+        name: getting-started
+        env:
+        - name: COLOR
+          value: "blue"
+        resources: {}
 ---
 
