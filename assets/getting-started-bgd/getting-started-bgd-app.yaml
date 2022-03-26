@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: apps/getting-started-bgd
-    repoURL: https://gitlab.com/Alexander_Gonzalez_Ferreiro/project-ci-cd-bg-daniel_alexander.git
+    repoURL: https://github.com/alexandergf/-project-ci-cd-bg-daniel_alexander
     targetRevision: main
   syncPolicy:
     automated:
