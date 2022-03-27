@@ -17,5 +17,5 @@ configurations:
 resources:
   - getting-started-rollout-ns.yaml
   - rollout.yaml
-  - getting-started-rollout-service-active.yaml
-  - getting-started-rollout-service-preview.yaml
+  - getting-started-rollout-svc-active.yaml
+  - getting-started-rollout-svc-preview.yaml
