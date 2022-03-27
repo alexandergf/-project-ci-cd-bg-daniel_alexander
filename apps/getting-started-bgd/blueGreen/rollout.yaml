@@ -24,4 +24,4 @@ spec:
     blueGreen:
       activeService: getting-started-rollout-svc-active
       previewService: getting-started-rollout-svc-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
