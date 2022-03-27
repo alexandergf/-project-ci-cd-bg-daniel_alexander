@@ -16,11 +16,8 @@ spec:
       - name: getting-started-rollout
         image: docker.io/alexandergf1996/getting-started:1.0.0-SNAPSHOT
         env:
-          - name: WELCOME
-            valueFrom:
-              configMapKeyRef:
-                name: getting-started-rollout-config
-                key: WELCOME
+        - name: COLOR
+          value: "blue"
         ports:
         - containerPort: 8080
   strategy:
