@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: getting-started-rollout-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: getting-started-rollout
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: apps/getting-started-bgd/blueGreen
+    repoURL: https://github.com/alexandergf/-project-ci-cd-bg-daniel_alexander
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true

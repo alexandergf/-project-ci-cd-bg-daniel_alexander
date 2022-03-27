@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: getting-started-rollout
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: getting-started-rollout
+  template:
+    metadata:
+      labels:
+        app: getting-started-rollout
+    spec:
+      containers:
+      - name: getting-started-rollout
+        image: docker.io/alexandergf1996/getting-started:1.0.0-SNAPSHOT
+        env:
+          - name: WELCOME
+            valueFrom:
+              configMapKeyRef:
+                name: getting-started-rollout-config
+                key: WELCOME
+        ports:
+        - containerPort: 8080
+  strategy:
+    blueGreen:
+      activeService: getting-started-rollout-svc-active
+      previewService: getting-started-rollout-svc-preview
+      autoPromotionEnabled: false
