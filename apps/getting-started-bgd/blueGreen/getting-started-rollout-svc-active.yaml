@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app:  getting-started-rollout
-  type:  ClusterIP
+  type:  NodePort
   ports:
   - name:  http
     port:  8080
