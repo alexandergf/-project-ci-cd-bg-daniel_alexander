@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps/getting-started-bgd
+    path: apps/getting-started-bgd/overlays
     repoURL: https://github.com/alexandergf/-project-ci-cd-bg-daniel_alexander
     targetRevision: main
   syncPolicy:
