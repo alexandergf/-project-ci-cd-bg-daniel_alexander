@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: getting-started-rollout
-        image: docker.io/alexandergf1996/getting-started:1.0.503386360-SNAPSHOT
+        image: docker.io/alexandergf1996/getting-started:1.0.503317994-SNAPSHOT
         env:
         - name: COLOR
           value: "green"
